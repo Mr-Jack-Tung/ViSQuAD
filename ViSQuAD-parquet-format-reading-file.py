@@ -15,9 +15,11 @@ print(parquet_file.schema)
 
 ViSQuAD = pq.read_table(file_name, columns=['context', 'question', 'text']).to_pandas() # pq.read_table ; pq.read_pandas
 
-print(f"### Tham khảo:",ViSQuAD['context'].loc[0])
-print(f"### Câu hỏi:",ViSQuAD['question'].loc[0])
-print(f"### Trả lời:",ViSQuAD['text'].loc[0])
+for i in range(6):
+  print(f"### Tham khảo:",ViSQuAD['context'].loc[i])
+  print(f"### Câu hỏi:",ViSQuAD['question'].loc[i])
+  print(f"### Trả lời:",ViSQuAD['text'].loc[i])
+  print("\n"*2)
 
 """
 <pyarrow._parquet.FileMetaData object at 0x7f83682d1c10>

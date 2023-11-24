@@ -8,6 +8,7 @@
 import pyarrow.parquet as pq
 
 file_name ='data/train-00000-of-00001-bfe7c79c7c608223.parquet'
+# file_name ='data/test-00000-of-00001-c0f6071e18804893.parquet'
 
 parquet_file = pq.ParquetFile(file_name)
 print(parquet_file.metadata)
